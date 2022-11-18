@@ -2,6 +2,6 @@
 hamilton-7-to-do-react-ColinHuart created by GitHub Classroom
 
 
-#Intro React
+# Intro React
 
- Result here[here](guileless-blini-ab734b.netlify.app)
+ Result [here](guileless-blini-ab734b.netlify.app)
