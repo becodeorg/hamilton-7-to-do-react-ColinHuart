@@ -1,14 +1,16 @@
+import "./TodoList.css";
+
 function List() {
   return (
-    <div>
-      <label>
+    <ul className="list">
+      <li>
         <input type="CheckBox" /> Be Nice
-      </label>
-      <label>
+      </li>
+      <li>
         <input type="CheckBox" />
         Playing music
-      </label>
-    </div>
+      </li>
+    </ul>
   );
 }
 
