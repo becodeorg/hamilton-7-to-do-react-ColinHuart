@@ -2,3 +2,9 @@ body {
   padding: 0ch;
   margin: 0;
 }
+#root {
+  background-color: #b7990d;
+  color: #f2f4cb;
+  height: 100vh;
+  padding-top: 100px;
+}

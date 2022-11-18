@@ -1,15 +1,21 @@
 import "./TodoList.css";
+import React, { useState } from "react";
 
 function List() {
+  const initalTodos = [
+    { name: "Be Nice", complete: true },
+    { name: "Playing music", complete: false },
+  ];
+  const [todos, setTodos] = useState(initalTodos);
+
   return (
     <ul className="list">
-      <li>
-        <input type="CheckBox" /> Be Nice
-      </li>
-      <li>
-        <input type="CheckBox" />
-        Playing music
-      </li>
+      {todos.map((todo) => (
+        <li key={todo.toString()} className="li">
+          <input type="CheckBox" defaultChecked={todo.complete} />
+          {todo.name}
+        </li>
+      ))}
     </ul>
   );
 }

@@ -1,0 +1,14 @@
+.submit {
+  margin-top: 20px;
+}
+.SubmitButton {
+  height: 40px;
+  border-radius: 1%;
+  background-color: #8cada7;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+}
+.SubmitButton:hover {
+  background-color: #b7990d;
+}
