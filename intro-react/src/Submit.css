@@ -12,3 +12,7 @@
 .SubmitButton:hover {
   background-color: #b7990d;
 }
+.inputTodos {
+  height: 40px;
+  width: 400px;
+}
