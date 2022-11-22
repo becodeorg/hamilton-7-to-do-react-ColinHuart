@@ -1,5 +1,5 @@
 import "./TodoList.css";
-import React, { useState } from "react";
+import React from "react";
 import { useRef } from "react";
 
 function List({ newTodo }) {
@@ -11,7 +11,7 @@ function List({ newTodo }) {
   return (
     <ul className="list">
       {newTodo.map((todo) => (
-        <li key={todo.toString()} className="li">
+        <li key={todo.id} className="li">
           <input
             ref={ref}
             type="CheckBox"

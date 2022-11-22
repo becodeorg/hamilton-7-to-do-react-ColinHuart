@@ -5,16 +5,12 @@ import List from "./TodoList";
 import React, { useState } from "react";
 
 function App() {
-  const initalTodos = [
-    { name: "Be Nice", complete: false },
-    { name: "Playing music", complete: false },
-  ];
-  const [todos, setTodos] = useState(initalTodos);
+  const [todos, setTodos] = useState([]);
 
   return (
     <div className="background">
       <Title />
-      <Submit value={(first) => setTodos(first)} />
+      <Submit setdoto={setTodos} />
       <List newTodo={todos} />
     </div>
   );

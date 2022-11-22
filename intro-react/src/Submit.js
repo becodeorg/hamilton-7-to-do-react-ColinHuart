@@ -1,14 +1,17 @@
 import "./Submit.css";
-import React, { useRef, useState } from "react";
-function Submit({ value }) {
-  const [first, setFirst] = useState();
+import React, { useRef } from "react";
+import { v4 as uuidv4 } from "uuid";
+function Submit({ setdoto }) {
+  let first;
   const inputRef = useRef();
-  function buttonOnClick(props) {
+  function buttonOnClick() {
     first = inputRef.current.value;
-    //const inputElement = inputRef.current;
-    // console.log(inputElement.value);
-    // inputElement.value = null;
-    props.value(first);
+    const inputElement = inputRef.current;
+    setdoto((prevTodos) => {
+      return [...prevTodos, { id: uuidv4(), name: first, complete: false }];
+    });
+
+    inputElement.value = null;
   }
   return (
     <div>
