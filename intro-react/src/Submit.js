@@ -1,12 +1,14 @@
 import "./Submit.css";
-import React, { useRef } from "react";
-function Submit() {
+import React, { useRef, useState } from "react";
+function Submit({ value }) {
+  const [first, setFirst] = useState();
   const inputRef = useRef();
-  function buttonOnClick() {
-    const inputElement = inputRef.current;
-
-    console.log(inputElement.value);
-    inputElement.value = null;
+  function buttonOnClick(props) {
+    first = inputRef.current.value;
+    //const inputElement = inputRef.current;
+    // console.log(inputElement.value);
+    // inputElement.value = null;
+    props.value(first);
   }
   return (
     <div>

@@ -2,21 +2,15 @@ import "./TodoList.css";
 import React, { useState } from "react";
 import { useRef } from "react";
 
-function List() {
+function List({ newTodo }) {
   const ref = useRef(null);
   const handleClick = () => {
     console.log(ref.current.checked);
   };
 
-  const initalTodos = [
-    { name: "Be Nice", complete: false },
-    { name: "Playing music", complete: false },
-  ];
-  const [todos, setTodos] = useState(initalTodos);
-
   return (
     <ul className="list">
-      {todos.map((todo) => (
+      {newTodo.map((todo) => (
         <li key={todo.toString()} className="li">
           <input
             ref={ref}
